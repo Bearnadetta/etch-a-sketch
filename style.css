@@ -12,6 +12,9 @@
     
 }
 .square {
-    background: pink;
+    background: rgb(161, 93, 206);
     border: 1px solid black;
+}
+.active {
+    background: black;
 }
