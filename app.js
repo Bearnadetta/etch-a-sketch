@@ -14,8 +14,6 @@ const onClear = function (e) {
             e.target.style.backgroundColor = 'black';
         });
         container.appendChild(square);
-
-
     };
 };
 
@@ -39,5 +37,5 @@ resizeBtn.addEventListener('click', function(){
 });
 
 
-
 onClear(16);
+
