@@ -2,7 +2,7 @@ const container = document.getElementById('container');
 const clearBtn = document.getElementById('clearBtn');
 const resizeBtn = document.getElementById('resizeBtn');
 let userInput = '';
-
+//clears the #container, then fills with squares
 const onClear = function (e) {
     container.innerHTML = '';
     container.style.setProperty('--grid-rows', e);
@@ -16,7 +16,8 @@ const onClear = function (e) {
         container.appendChild(square);
     };
 };
-
+/*runs the onClear function, checking for a user input. If no
+user input, defaults to 16 */
 clearBtn.addEventListener('click', function(){
     if (userInput) {
         onClear(userInput);
@@ -25,7 +26,8 @@ clearBtn.addEventListener('click', function(){
     }
     
 });
-
+/* prompts the user for the number of rows and colums, then runs the onClear function with 
+that number of rows and columns */
 resizeBtn.addEventListener('click', function(){
     userInput = prompt('please enter a number between 4 and 100', 16);
     if (userInput >= 4 && userInput <= 100) {
