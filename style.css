@@ -4,8 +4,8 @@
 }
 
 #container {
-    width: 960px;
-    height: 960px;
+    height: 700px;
+    width: 700px;
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -13,8 +13,10 @@
 }
 .square {
     background: rgb(161, 93, 206);
-    border: 1px solid black;
+    /*border: 1px solid rgb(65, 65, 65); */
+    transition: all .3s ease;
 }
 .active {
     background: black;
+    
 }

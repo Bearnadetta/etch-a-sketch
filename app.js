@@ -1,4 +1,7 @@
 const container = document.getElementById('container');
+const clearBtn = document.getElementById('clearBtn');
+const resizeBtn = document.getElementById('resizeBtn');
+let userInput = '';
 
 const onClear = function (e) {
     container.innerHTML = '';
@@ -15,6 +18,25 @@ const onClear = function (e) {
 
     };
 };
+
+clearBtn.addEventListener('click', function(){
+    if (userInput) {
+        onClear(userInput);
+    } else {
+        onClear(16);
+    }
+    
+});
+
+resizeBtn.addEventListener('click', function(){
+    userInput = prompt('please enter a number between 4 and 100', 16);
+    if (userInput >= 4 && userInput <= 100) {
+        onClear(userInput);
+    }
+    else {
+        alert('please enter a valid number');
+    }
+});
 
 
 
