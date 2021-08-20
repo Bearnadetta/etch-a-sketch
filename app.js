@@ -1,7 +1,9 @@
 const container = document.getElementById('container');
 const clearBtn = document.getElementById('clearBtn');
 const resizeBtn = document.getElementById('resizeBtn');
+const rainbowMode = document.getElementById('rainbowMode');
 let userInput = '';
+let colorChoice = '';
 //clears the #container, then fills with squares
 const onClear = function (e) {
     container.innerHTML = '';
@@ -11,7 +13,13 @@ const onClear = function (e) {
         let square = document.createElement('div');
         square.className = 'square';
         square.addEventListener('mouseenter', function(e){
-            e.target.style.backgroundColor = 'black';
+            let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+            if(rainbowMode.checked) {
+                colorChoice = randomColor;
+            } else{
+                colorChoice = 'black';
+            };
+            e.target.style.backgroundColor = colorChoice;
         });
         container.appendChild(square);
     };
@@ -37,7 +45,6 @@ resizeBtn.addEventListener('click', function(){
         alert('please enter a valid number');
     }
 });
-
 
 onClear(16);
 
