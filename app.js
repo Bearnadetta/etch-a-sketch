@@ -2,6 +2,7 @@ const container = document.getElementById('container');
 const clearBtn = document.getElementById('clearBtn');
 const resizeBtn = document.getElementById('resizeBtn');
 const rainbowMode = document.getElementById('rainbowMode');
+const toggleBtn = document.getElementById('gridLines');
 let userInput = '';
 let colorChoice = '';
 //clears the #container, then fills with squares
@@ -33,6 +34,12 @@ clearBtn.addEventListener('click', function(){
         onClear(16);
     }
     
+});
+
+toggleBtn.addEventListener('click', function(){
+    let squares = container.querySelectorAll('.square')
+    squares.forEach((square) => square.classList.toggle('hasGrid'))
+    toggleBtn.classList.toggle('clickedBtn');
 });
 /* prompts the user for the number of rows and colums, then runs the onClear function with 
 that number of rows and columns */
