@@ -4,13 +4,14 @@
 }
 body {
     margin: 0px;
-    background-color : rgb(177, 140, 175);
+    background-color : #B9A6E4;
 }
 #header {
-    background:rgb(158, 61, 223);
+    background: #558383;
+    color : #492F53;
     padding: 10px;
     top: 0;
-    box-shadow: 0px 1px 15px rgb(115, 24, 136);
+    box-shadow: 0px 1px 15px #456b6b;
 }
 .header-content {
     display: flex;
@@ -24,6 +25,7 @@ body {
     align-items: center;
     text-align: center;
     padding:20px;
+    margin: 20px;
 }
 #menuDiv {
     display :flex;
@@ -38,7 +40,7 @@ body {
     margin: 10px;
     padding: 20px 50px 20px 50px;
     border-radius: 25px;
-    background: rgb(99, 71, 202);
+    background: #614665;
 }
 #rainbowSlider {
     border: 1px solid rgb(29, 29, 29);
@@ -73,14 +75,20 @@ body {
 .hasGrid {
   border: 0px;
 }
+.button {
+  color: #492F53;
+  background-color: #558383;
+  border: 3px groove #614665;
+  border-radius: 15px;
+}
+.button:active {
+  background-color: #E2C984;
+  transform: translateY(4px);
+}
 .clickedBtn {
-  background-color: blue;
+  background-color: #E2C984;
 }
 
-.active {
-    background: black;
-    
-}
 .switch {
     position: relative;
      display: inline-block;
@@ -137,15 +145,16 @@ body {
     border-radius: 50%;
   }
 #gitHubLink {
-    color:rgb(99, 15, 155);
+    color:#492F53;
 }
 #gitHubLink.visited {
-    color:rgb(69, 3, 114);
+    color:#492F53;
 }
 
 #footer {
-    background:rgb(155, 79, 206);
-    color:rgb(99, 15, 155);
+    background:#558383;
+    color:#492F53;
+    box-shadow: 0px -1px 15px #456b6b;
     position: fixed;
     bottom: 0;
     width: 100%;

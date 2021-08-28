@@ -18,7 +18,7 @@ const onClear = function (e) {
             if(rainbowMode.checked) {
                 colorChoice = randomColor;
             } else{
-                colorChoice = 'black';
+                colorChoice = '#492F53';
             };
             e.target.style.backgroundColor = colorChoice;
         });
